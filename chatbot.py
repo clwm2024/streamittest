@@ -32,7 +32,10 @@ st.title('Test mit Langchain als Gitbot')
 openai_api_key = os.getenv("OPENAI_API_KEY")
 openai.api_key = openai_api_key
 print(openai_api_key)
-st.write(f'API Key: {openai_api_key}')
+if not openai_api_key is None:
+    st.write(f'API Key vorhanden.')
+else:
+    st.write(f'API Key NICHT vorhanden.')
 
 # Get OpenAI API key and source document input
 #openai_api_key = st.text_input("OpenAI API Key", type="password")
