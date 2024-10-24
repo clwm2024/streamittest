@@ -1,8 +1,0 @@
-langchain
-langchain-community
-openai
-streamlit
-tiktoken
-chromadb
-pypdf
-pycryptodome
