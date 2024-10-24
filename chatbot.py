@@ -21,8 +21,10 @@ Beantworte die Frage anhand des obenstehenden Kontexts: {question}
 """
 
 # .env-Datei laden
-load_dotenv('settings.env')
-
+try:
+    load_dotenv('settings.env')
+except:
+    print("settings.env konnte nicht geladen werden.")
 # Streamlit app
 st.title('Test mit Langchain als Gitbot')
 
